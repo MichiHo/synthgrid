@@ -1,0 +1,228 @@
+body {
+	font-family: sans-serif;
+}
+h2 {
+	color: red;
+}
+.synth-grid-main {
+	display: flex;
+	padding: 10px;
+	gap: 10px;
+}
+.synth-grid {
+	box-shadow: 0px 0px 10px black;
+	padding: 3px;
+	border-collapse: collapse;
+	table-layout: fixed;
+	display: flex;
+	user-select: none;
+	flex-direction: column;
+}
+.synth-grid tr {
+	display: flex;
+}
+.slot {
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	line-height: 14px;
+	text-align: center;
+	pointer-events: all;
+	position: relative;
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.synth-grid-palette {
+	border-left: solid 5px gray;
+	padding: 5px;
+}
+.synth-grid-palette > h1 {
+	margin: -10px;
+	color: gray;
+}
+.synth-grid-subpalette > h2 {
+	color: black;
+	font-size: 16px;
+	display: flex;
+}
+.synth-grid-subpalette .slot {
+	display: inline-block;
+	margin-right: 3px;
+}
+.synth-grid-subpalette > h2 > span {
+	text-decoration: underline;
+	margin-top: -3px;
+	
+}
+.controls-bar {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+button {
+	background-color: lightgray;
+	border: solid 1px gray;
+	border-radius: 5px;
+	padding: 5px;
+	max-height: 2.3em;
+	margin: auto 0px;
+	cursor: pointer;
+}
+button:hover {
+	border-color: black;
+	box-shadow: 0px 0px 4px gray;
+}
+button:active {
+	background-color: white;
+}
+.play-btn {
+	background-color: rgb(80,205,90);
+}
+.block-osc {
+	background-color: #6abf6a;
+}
+.block-reverb {
+	background-color: orange;
+}
+.block-gain {
+	background-color: rgb(180,180,180);
+}
+.block-output {
+	background-color: #5fa5e3;
+}
+.block-filter {
+	background-color: yellow;
+}
+.playing .playable {
+	box-shadow: 0px 0px 6px blue;
+}
+.gain-slider.noUi-horizontal {
+	min-width: 100px;
+	margin: 0px 10px 30px 10px;
+	height: 10px;
+}
+.gain-slider.noUi-horizontal .noUi-handle {
+	height: 13px;
+	width: 10px;
+	left: 5px;
+	top:-2px
+}
+.block-overlay-wrapper {
+	position: absolute;
+	background: rgba(255,255,255,0);
+	padding: 9px;
+	z-index: 1000;
+}
+.block-overlay {
+	width: 120px;
+	padding: 7px;
+	pointer-events: all;
+	text-align: left;
+}
+.block-overlay-type {
+	color: rgba(0,0,0,0.4);
+	font-size: 9px;
+	margin: -8px 0px -8px -4px;
+	font-style: italic;
+	display: block;
+}
+.block-overlay-name {
+	font-weight: bold;
+	text-align: right;
+	display: block;
+	border-bottom: solid 1px black;
+	margin-bottom: 5px;
+}
+.option-picker {
+	display: flex;
+	flex-wrap: wrap;
+}
+.option-picker button {
+	flex-grow: 1;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 0px;
+	background-color: rgba(0,0,0,0.2);
+	padding: 0px 10px;
+}
+.option-picker button:hover {
+	box-shadow: none;
+	color: white;
+}
+.option-picker button.selected {
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+}
+
+.box-slider-wrapper {
+	line-break: strict;
+}
+.box-slider-title {
+	margin-left: 4px;
+	color: gray;
+	font-weight: normal;
+	font-size: 12px;
+	user-select: none;
+}
+.box-slider-revealed .box-slider-title {
+	color: black;
+}
+.box-slider {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+	background-color: lightgray;
+	user-select: none;
+  position: relative;
+}
+.box-slider-slider {
+	box-sizing: border-box;
+	background-color: gray;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+}
+.box-slider-hidden {
+	display: none;
+}
+.box-slider-revealed > .box-slider {
+	background-color: rgb(180,180,180);
+}
+.box-slider-revealed .box-slider-slider {
+	background-color: rgb(200, 100, 100);
+}
+.box-slider-revealed .box-slider-hidden {
+	display: initial;
+}
+.box-slider-min-label,
+.box-slider-max-label,
+.box-slider-value{
+	position: absolute;
+	font-size: 9px;
+	user-select: none;
+	pointer-events: none;
+	padding: 0px 2px;
+	width: 100%;
+}
+.box-slider-min-label,
+.box-slider-max-label {
+	box-sizing: border-box;
+	background-color: lightgray;
+	color: rgba(0,0,0,0.3);
+}
+.box-slider-min-label {
+	top: 100%;
+	border-radius: 0px 0px 5px 2px;
+}
+.box-slider-max-label {
+	bottom: 100%;
+	border-radius: 2px 5px 0px 0px;
+}
+.box-slider-value {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: rgba(0,0,0,0.5);
+}
