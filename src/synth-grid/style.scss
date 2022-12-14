@@ -63,11 +63,9 @@ h2 {
 }
 button {
 	background-color: lightgray;
-	border: solid 1px gray;
-	border-radius: 5px;
+	border: none;
 	padding: 5px;
-	max-height: 2.3em;
-	margin: auto 0px;
+	min-height: 100%;
 	cursor: pointer;
 }
 button:hover {
@@ -81,19 +79,31 @@ button:active {
 	background-color: rgb(80,205,90);
 }
 .block-osc {
-	background-color: #6abf6a;
+	background-color: #aed578;
+}
+.block-input {
+	background-color: #6abf93;
+}
+.block-gain {
+	background-color: rgb(195, 195, 195);
+}
+.block-comp {
+	background-color: rgb(240, 104, 104);
+}
+.block-filter {
+	background-color: yellow;
+}
+.block-delay {
+	background-color: rgb(208, 106, 217);
+}
+.block-waveshaper {
+	background-color: rgb(135, 118, 99);
 }
 .block-reverb {
 	background-color: orange;
 }
-.block-gain {
-	background-color: rgb(180,180,180);
-}
 .block-output {
 	background-color: #5fa5e3;
-}
-.block-filter {
-	background-color: yellow;
 }
 .playing .playable {
 	box-shadow: 0px 0px 6px blue;

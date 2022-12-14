@@ -16,13 +16,22 @@ export { GainBlock } from "./blocks/gainBlock";
 import { OutputBlock } from "./blocks/outputBlock";
 export { OutputBlock } from "./blocks/outputBlock";
 
+import { InputBlock } from "./blocks/inputBlock";
+import { CompressorBlock } from "./blocks/compressorBlock";
+import { DelayBlock } from "./blocks/delayBlock";
+import { WaveshaperBlock } from "./blocks/waveshaperBlock";
+export { InputBlock } from "./blocks/inputBlock";
 
 export const blockTypes = [
-  GainBlock,
-  OutputBlock,
   OscillatorBlock,
-  ReverbBlock,
+  InputBlock,
+  GainBlock,
+  CompressorBlock,
   FilterBlock,
+  DelayBlock,
+  WaveshaperBlock,
+  ReverbBlock,
+  OutputBlock,
 ];
 export const blockTypeMap = new Map<string, typeof AudioBlock>();
 for (let t of blockTypes) {
